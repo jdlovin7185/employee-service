@@ -1,25 +1,35 @@
 package com.employee.Service;
 
 import com.employee.Entity.Employee;
+import com.employee.Repository.EmployeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService{
+    @Autowired
+    private EmployeeRepository repository;
     @Override
-    public void addEmployee(Employee employee) {
+    public Employee addEmployee(Employee employee) {
+        return repository.save(employee);
+    }
+
+    @Override
+    public Employee updateEmployee(long id, Employee employee) {
+        Employee employee1 = repository.getReferenceById(id);
+        employee1.setFirstName(employee1.getFirstName());
+        employee1.setLastName(employee1.getLastName());
+        employee1.setUserName(employee1.getUserName());
+        employee1.setPassWord(employee1.getPassWord());
+        return repository.save(employee1);
 
     }
 
     @Override
-    public void updateEmployee(Employee employee) {
-
-    }
-
-    @Override
-    public void deleteEmployee(Long id) {
-
+    public void deleteEmployee(Employee employee) {
+        repository.delete(employee);
     }
 
     @Override

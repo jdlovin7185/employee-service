@@ -1,15 +1,14 @@
 package com.employee.Service;
 
 import com.employee.Entity.Employee;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 
 public interface EmployeeService {
-    void addEmployee(Employee employee);
-    void updateEmployee(Employee employee);
-    void deleteEmployee(Long id);
+    Employee addEmployee(Employee employee);
+    Employee updateEmployee(long id, Employee employee);
+    void deleteEmployee(Employee employee);
     Employee loginAccount(String userName, String passWord);
     List<Employee> getEmployees();
     Employee empByID(Long id);
