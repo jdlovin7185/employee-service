@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: EMPLOYEE-SERVICE
+  main:
+    web-application-type: reactive
 
 eureka:
   client:

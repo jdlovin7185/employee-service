@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -13,6 +14,7 @@ import lombok.*;
 @Setter
 @Getter
 @ToString
+@Builder
 
 public class Employee {
     @Id
