@@ -33,7 +33,7 @@ public class EmployeeController {
 
     @GetMapping("/")
     public String randomMessage(){
-        return "Hi lil bitch";
+        return "Hi lil duck";
     }
 }
 
