@@ -22,8 +22,8 @@ public class EmployeeController {
     }
 
     @PostMapping("/update")
-    public Employee updateEmployee(@RequestBody Employee employee, Long id){
-        return service.updateEmployee(id, employee);
+    public Employee updateEmployee(@RequestBody Employee employee){
+        return service.updateEmployee(employee);
     }
 
     @DeleteMapping("/delete")
@@ -35,6 +35,7 @@ public class EmployeeController {
     public String randomMessage(){
         return "Hi lil duck";
     }
+
 }
 
 

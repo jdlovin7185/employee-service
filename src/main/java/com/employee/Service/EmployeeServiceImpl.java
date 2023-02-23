@@ -17,13 +17,9 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public Employee updateEmployee(long id, Employee employee) {
-        Employee employee1 = repository.getReferenceById(id);
-        employee1.setFirstName(employee1.getFirstName());
-        employee1.setLastName(employee1.getLastName());
-        employee1.setUserName(employee1.getUserName());
-        employee1.setPassWord(employee1.getPassWord());
-        return repository.save(employee1);
+    public Employee updateEmployee(Employee employee) {
+
+        return repository.save(employee);
 
     }
 
@@ -38,7 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public List<Employee> getEmployees() {
+    public List<Employee> getEmployees(String userName) {
         return null;
     }
 
