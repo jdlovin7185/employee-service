@@ -15,18 +15,18 @@ public class EmployeeController {
     @Autowired
     EmployeeService service;
 
-    @PostMapping("/add")
+    @PostMapping("/")
     public Employee addEmployee(@RequestBody Employee employee){
 
         return service.addEmployee(employee);
     }
 
-    @PostMapping("/update")
+    @PutMapping("/")
     public Employee updateEmployee(@RequestBody Employee employee){
         return service.updateEmployee(employee);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/")
     public void deleteEmployee(@RequestBody Employee employee){
         service.deleteEmployee(employee);
     }
