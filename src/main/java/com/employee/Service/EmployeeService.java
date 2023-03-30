@@ -10,7 +10,7 @@ public interface EmployeeService {
     Employee updateEmployee(Employee employee);
     void deleteEmployee(Employee employee);
     Employee loginAccount(String userName, String passWord);
-    List<Employee> getEmployees(String userName);
+    List<Employee> getEmployees();
 
     Employee empByID(Long id);
 }

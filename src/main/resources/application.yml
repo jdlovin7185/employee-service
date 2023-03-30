@@ -15,3 +15,10 @@ eureka:
       defaultZone: http://localhost:8761/eureka
     instance:
       localhost:
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type: TRACE
